@@ -28,7 +28,8 @@ SRSTCK <- function (data, cancer, type, cell_type, minGene = 500, maxGene = 5000
                     distance = "euclidean", n.cores = 1)
 { 
   file_path <- system.file("Result_Data", "Model.xlsx", package = "SRSTCK")
-  Model <- readxl::read_excel(file_path)
+  Model <- readxl::read_excel(file_path, col_names = FALSE, .name_repair = "minimal")
+  colnames(Model) <- c("gene", "sen_model", "non_sen_model")
   Model <- as.data.frame(Model)
   rownames(Model) <- Model[, 1]
   Model <- Model[, -1]
