@@ -31,6 +31,7 @@ SRSTCK <- function (data, cancer, type, cell_type, minGene = 500, maxGene = 5000
   Model <- readxl::read_excel(file_path, col_names = FALSE, .name_repair = "minimal")
   colnames(Model) <- c("gene", "sen_model", "non_sen_model")
   Model <- as.data.frame(Model)
+  Model <- Model[-1, ]
   rownames(Model) <- Model[, 1]
   Model <- Model[, -1]
   sen.gene <- rownames(Model)
