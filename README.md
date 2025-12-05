@@ -2,11 +2,11 @@ SRSTCK: An Interpretable Algorithm for the Single-Cell Recognition of Senesc
 ===
 Senescence has been listed as one of the cancer hallmarks, and numerous anti-tumor treatments could cause tumor cell senescence, including radiotherapy, chemotherapy, and targeted therapies. Meanwhile, senescent tumor cells (STCs) have been found in diverse cancer stages. STCs could induce immunosuppression of cancer, and then promote the development of tumor. It is therefore critical to understand how STCs contribute to cancer progression by identifying STCs in cancer. To solve this problem, we proposed SRSTCK, a supervised STCs identifier that could accurately identify STCs in cancer single-cell RNA-seq data based on Kullback-Leibler Divergence. In this vignette, we will predict senescent tumor cells by calculating 10X single-cell RNA data using the {SRSTCK} R package.<br>
 
-![image text](https://github.com/yjybio/Test5/blob/main/workflows/workflows.png)
+![image text](https://github.com/yjybio/SRSTCK/blob/main/workflows/workflow.tif)
 
 Step 1: installation
 --
-Installing SRSTCM from GitHub <br>
+Installing SRSTCK from GitHub <br>
 ```R
 library(devtools) 
 install_github("yjybio/SRSTCK")
